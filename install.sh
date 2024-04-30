@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#specifies which nvim branch to use
 nvim_branch="managawa"
 
 function install_package {
@@ -18,6 +19,12 @@ install_package "alacritty"
 cp -rv ./alacritty ~/.config
 
 #neovim
+if test -d ./nvim-config; then
+	echo "removing existing nvim repo..."
+	rm -rf ./nvim-config
+fi
+
+echo "cloning nvim repo..."
 git clone -b $nvim_branch https://github.com/JustinQM/nvim-config.git
 install_package "neovim"
 rm -rf ./nvim-config/.git
@@ -26,3 +33,6 @@ cp -rv ./nvim-config/* ~/.config/nvim/
 #tmux
 install_package "tmux"
 cp -v ./tmux/tmux.conf ~/.tmux.conf
+
+#bashrc
+cp -v ./bashrc/bashrc ~/.bashrc
