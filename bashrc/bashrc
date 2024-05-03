@@ -16,3 +16,6 @@ alias v="nvim"
 
 alias t="tmux"
 alias tm="tmux"
+
+#load fzf keybinds
+eval "$(fzf --bash)"

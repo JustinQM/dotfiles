@@ -34,5 +34,8 @@ cp -rv ./nvim-config/* ~/.config/nvim/
 install_package "tmux"
 cp -v ./tmux/tmux.conf ~/.tmux.conf
 
+#fzf
+install_package "fzf"
+
 #bashrc
 cp -v ./bashrc/bashrc ~/.bashrc
