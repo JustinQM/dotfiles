@@ -33,6 +33,10 @@ cp -rv ./nvim-config/* ~/.config/nvim/
 #tmux
 install_package "tmux"
 cp -v ./tmux/tmux.conf ~/.tmux.conf
+#install plugin manager
+if ! test -d ~/.tmux/plugins/tmp; then
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 #fzf
 install_package "fzf"
