@@ -30,6 +30,9 @@ install_package "neovim"
 rm -rf ./nvim-config/.git
 cp -rv ./nvim-config/* ~/.config/nvim/
 
+#ripgrep
+install_package "ripgrep"
+
 #tmux
 install_package "tmux"
 cp -v ./tmux/tmux.conf ~/.tmux.conf
