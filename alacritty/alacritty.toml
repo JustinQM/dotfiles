@@ -1,12 +1,14 @@
 [font]
 size = 18.0
 
+#SF Mono (old font)
+
 [font.bold]
-family = "SF Mono"
+family = "Iosevka Custom"
 style = "Bold"
 
 [font.bold_italic]
-family = "SF Mono"
+family = "Iosevka Custom"
 style = "Bold Italic"
 
 [font.glyph_offset]
@@ -14,11 +16,11 @@ x = 0
 y = 0
 
 [font.italic]
-family = "SF Mono"
+family = "Iosevka Custom"
 style = "Italic"
 
 [font.normal]
-family = "SF Mono"
+family = "Iosevka Custom"
 style = "Regular"
 
 [font.offset]
@@ -27,3 +29,10 @@ y = 0
 
 [window]
 opacity = 0.85
+
+[cursor]
+	blink_interval = 500
+	blink_timeout = 0
+	[cursor.style]
+		shape = "Block"
+		blinking = "Always"
