@@ -25,10 +25,8 @@ if test -d ./nvim-config; then
 fi
 
 echo "cloning nvim repo..."
-git clone -b $nvim_branch https://github.com/JustinQM/nvim-config.git
+git clone -b $nvim_branch https://github.com/JustinQM/nvim-config.git ~/.config/nvim
 install_package "neovim"
-rm -rf ./nvim-config/.git
-cp -rv ./nvim-config/* ~/.config/nvim/
 
 #ripgrep
 install_package "ripgrep"
