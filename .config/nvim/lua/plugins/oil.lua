@@ -3,7 +3,8 @@ return {
 		'stevearc/oil.nvim',
 		lazy = false,
 		opts = {
-			skip_confirm_for_simple_edits = true
+			skip_confirm_for_simple_edits = true,
+			watch_for_changes = true
 		},
 
 		--defaults but here for refrence
