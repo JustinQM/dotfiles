@@ -43,6 +43,10 @@ vim.cmd([[hi LineNr guibg=none guifg=#ff7185]]) --sets relative line numbers bac
 -- vim.cmd([[hi LineNr guibg=none guifg=#fd915d]]) --sets relative line numbers background to transparent
 
 -- [[Diagnostic LSP Settings]]
+
+--disabled LOL
+vim.diagnostic.disable()
+--[[
 vim.diagnostic.config({
 	--only show virtual text on errors
 	virtual_text = {
@@ -55,6 +59,8 @@ vim.diagnostic.config({
 	virtual_lines = false,
 	signs = true,
 })
+--]]
+
 
 -- [[Todo Highlights]]
 vim.fn.matchadd("DiagnosticInfo", "\\(TODO:\\)")

@@ -26,6 +26,23 @@ return
 			lsp.html.setup{capabilities = capabilities}
 			lsp.marksman.setup{capabilities = capabilities}
 			lsp.powershell_es.setup{capabilities = capabilities}
-		end,
+
+			--custom lsps
+			local configs = require('lspconfig.configs')
+			if not configs.c3_lsp then 
+				configs.c3_lsp = {
+					default_config = {
+						cmd = {"/usr/local/bin/c3lsp"},
+						filetypes = {"c3","c3i"},
+						root_dir = function(fname)
+						return require('lspconfig.util').find_git_ancestor(fname)
+					end,
+					settings = {},
+					name = "c3_lsp"
+					}	
+				}
+			end
+			lsp.c3_lsp.setup{}
+		end
 	}
 }
