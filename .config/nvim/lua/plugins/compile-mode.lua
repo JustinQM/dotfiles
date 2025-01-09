@@ -5,9 +5,6 @@ return {
 		"nvim-lua/plenary.nvim",
 		{ "m00qek/baleia.nvim", tag = "v1.3.0" },
 	},
-	opts = {
-		default_command = ""
-	},
 	init = function()
 		local opts = {noremap = true, silent = true}
 		vim.api.nvim_set_keymap('n','<leader>CC',":Compile<CR>",opts) 
@@ -20,6 +17,7 @@ return {
     vim.g.compile_mode = {
         -- to add ANSI escape code support, add:
         baleia_setup = true,
+		default_command = "",
     }
   end
 }
