@@ -18,5 +18,5 @@ macos-titlebar-style = "hidden"
 
 #misc
 shell-integration-features = false
-command = tmux
+#command = tmux new -A -s $(ps aux | grep ghostty | wc -l)
 confirm-close-surface = false
