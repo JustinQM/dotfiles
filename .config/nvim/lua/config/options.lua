@@ -5,7 +5,7 @@ local opt = vim.opt
 opt.relativenumber = true        -- bool: Show relative line numbers
 opt.number = true                --bool: Show exact line number on current line
 opt.scrolloff = 4                -- int:  Min num lines of context
-opt.signcolumn = "no"           -- str:  Show the sign column
+opt.signcolumn = "auto"           -- str:  Show the sign column
 
 -- [[ Filetypes ]]
 opt.encoding = 'utf8'            -- str:  String encoding to use
