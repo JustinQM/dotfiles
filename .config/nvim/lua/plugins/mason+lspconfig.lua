@@ -26,6 +26,8 @@ return
 			lsp.html.setup{capabilities = capabilities}
 			lsp.marksman.setup{capabilities = capabilities}
 			lsp.powershell_es.setup{capabilities = capabilities}
+			lsp.gdshader_lsp.setup{capabilities = capabilities}
+			lsp.gdscript.setup{capabilities = capabilities}
 
 			--custom lsps
 			local configs = require('lspconfig.configs')
