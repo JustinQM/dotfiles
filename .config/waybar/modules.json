@@ -1,181 +1,51 @@
-//  __  __           _       _            
-// |  \/  | ___   __| |_   _| | ___  ___  
-// | |\/| |/ _ \ / _` | | | | |/ _ \/ __| 
-// | |  | | (_) | (_| | |_| | |  __/\__ \ 
-// |_|  |_|\___/ \__,_|\__,_|_|\___||___/ 
-//                                        
-//  
-// by Stephan Raabe (2023) 
-// ----------------------------------------------------- 
-//
 {
-    // Workspaces
-    "hyprland/workspaces" : {
-        "on-click": "activate",
-        "active-only": false,
-        "all-outputs": true,
+    "hyprland/workspaces": {
         "format": "{}",
         "format-icons": {
-			"urgent": "",
-			"active": "",
-			"default": ""
+            "urgent": "",
+            "active": "",
+            "default": ""
         },
+        "on-click": "activate",
+        "all-outputs": false,
         "persistent-workspaces": {
-              "*": [1, 2, 3, 4, 5]
-        }       
+            "*": 2
+        }
     },
 
-    // fuzzel Application Launcher
     "custom/appmenu": {
-        "format": "Apps",
+        "format": "⮝",
         "on-click": "fuzzel",
-    },
-    
-    // Power Menu
-    "custom/exit": {
-        "format": "",
-        "tooltip-format": "Powermenu",
-        "on-click": "~/.config/custom/scripts/powermenu.sh",
         "tooltip": false
     },
 
-    
-    // System tray
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
+	"clock": {
+		"format": "{:%a %b %d %I:%M %p}",
+		"tooltip-format": "{:%Y-%m-%d | %I:%M:%S %p}",
+		"interval": 1
+	},
 
-    // Clock
-    "clock": {
-        // "timezone": "America/Los_Angeles",
-		"format": "{:%I:%M %p }",
-		"tooltip-format": "{:%D}",
-		"format-alt": "{:%D %I:%M %p }",
-    },
-
-    // System
-    "custom/system": {
-        "format": "",
-        "tooltip": false
-    },
-
-    // CPU
-    "cpu": {
-        "format": "   {usage}% ",
-        "on-click": "hyprctl dispatch exec [float] 'alacritty -e htop'"
-    },
-
-    // Memory
-    "memory": {
-        "format": " {}% ",
-        "on-click": "hyprctl dispatch exec [float] 'alacritty -e htop'"
-    },
-
-    // Harddisc space used
-    "disk": {
-        "interval": 30,
-        "format": "D {percentage_used}% ",
-        "path": "/",
-        "on-click": "hyprctl dispatch exec [float] 'alacritty -e htop'"
-    }, 
-
-    "hyprland/language": {
-        "format": "/ K {short}"
-    },
-
-    // Group Hardware
-    "group/hardware": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 300,
-            "children-class": "not-memory",
-            "transition-left-to-right": false
-        },        
-        "modules": [
-            "custom/system",
-            "disk",
-            "cpu",
-            "memory",
-            "hyprland/language"
-        ]
-    },
-    
-   // Network
     "network": {
-        "format": "{ifname}",
-        "format-wifi": "    {signalStrength}%",
-        "format-ethernet": "",
-        "format-disconnected": " ", //An empty format will hide the module.
-        "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50,
-        "on-click": "hyprctl dispatch exec [float] 'alacritty -e nmtui'"
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "  Connected",
+        "format-disconnected": "  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "max-length": 50
     },
 
-    // Battery
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
-
-    // pipewire
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon}   {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "  {volume}%",
+        "format": "{icon}  {volume}%",
+        "format-muted": "  Muted",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [" ", " "]
+            "default": ["", "", ""]
         },
+        "scroll-step": 5,
         "on-click": "hyprctl dispatch exec [float] pwvucontrol",
         "on-click-right": "hyprctl dispatch exec [float] qpwgraph"
     },
 
-    // Bluetooth
-    "bluetooth": {
-		"format": "",
-        "format-disabled": "",
-        "format-off": "",
-        "interval": 30,
-        "on-click": "hyprctl dispatch exec [float] blueman-manager",
-        "format-no-controller": ""
-    },
-
-    // Other
-    "user": {
-        "format": "{user}",
-        "interval": 60,
-        "icon": false,
-    },
-
-    // Idle Inhibator
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "tooltip": true,
-        "format-icons":{
-            "activated": "",
-            "deactivated": ""
-        },
-        "on-click-right": "hyprlock"        
+    "tray": {
+        "spacing": 8,
+        "icon-size": 16
     }
 }
