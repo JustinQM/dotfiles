@@ -27,6 +27,18 @@ window#waybar {
     font-weight: 500;
 }
 
+@keyframes workspace-flash {
+  0%   { color: red; }
+  80%  { color: red; }
+  100% { color: @primary; }
+}
+
+#workspaces button.urgent {
+  color: red;            /* permanent red if you just want a static highlight */
+  /* -- or, to make it flash red briefly then settle back: -- */
+  animation: workspace-flash 1s ease-out infinite;
+}
+
 #custom-appmenu {
     font-size: 16px;
     padding: 0 18px 0 16px;
