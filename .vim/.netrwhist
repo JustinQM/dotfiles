@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/oreillmi/dev/test'
+let g:netrw_dirhist_6='/home/oreillmi/dev/pinochle_sim'
+let g:netrw_dirhist_5='/home/oreillmi/dev/deepseek_raylib'
+let g:netrw_dirhist_4='/home/oreillmi/dev/test'
+let g:netrw_dirhist_3='/home/oreillmi/dev/navigraph_simlink_linux/src'
+let g:netrw_dirhist_2='/home/oreillmi/dev/navigraph_simlink_linux'
+let g:netrw_dirhist_1='/home/oreillmi/dev/test'
