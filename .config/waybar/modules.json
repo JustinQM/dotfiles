@@ -26,7 +26,7 @@
 	},
 
     "network": {
-        "format-wifi": "  {signalStrength}%",
+        "format-wifi": "   {signalStrength}%",
         "format-ethernet": "  Connected",
         "format-disconnected": "  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr}",
@@ -37,7 +37,7 @@
         "format": "{icon}  {volume}%",
         "format-muted": "  Muted",
         "format-icons": {
-            "default": ["", "", ""]
+            "default": [" ", " ", " "]
         },
         "scroll-step": 5,
         "on-click": "hyprctl dispatch exec [float] pwvucontrol",

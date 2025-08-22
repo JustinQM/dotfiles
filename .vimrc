@@ -1,6 +1,8 @@
 " set leader
 let mapleader = " "
 
+filetype plugin indent on
+
 " tab settings
 set shiftwidth=4 smarttab
 set expandtab
@@ -54,3 +56,21 @@ nnoremap <silent> <leader>tt :BuildTags<CR>
 
 " annoying curly brace error
 let c_no_curly_error=1
+
+" allow editing other files even while the current buffer has changes
+set hidden
+
+" client server
+if has('clientserver')
+  silent! call remote_startserver('GODOT')
+endif
+
+
+" Jump to definition of word under cursor
+nnoremap gd <C-]>
+" List all tag matches for the word under cursor
+nnoremap gD g]
+" Jump back in tag stack
+nnoremap gb <C-t>
+" Quick list of matches 
+nnoremap K :ts <C-r><C-w><CR>

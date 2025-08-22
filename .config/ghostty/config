@@ -6,6 +6,7 @@ background-blur-radius = 40
 
 #font
 font-family = Iosevka Custom
+# font-family = SF Mono
 font-size = 18
 
 #cursor
