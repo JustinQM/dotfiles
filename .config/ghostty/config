@@ -5,8 +5,9 @@ background-opacity = 0.85
 background-blur-radius = 40
 
 #font
-font-family = Iosevka Custom
-# font-family = SF Mono
+#font-family = Iosevka Custom
+font-family = SF Mono
+#font-family = Ubuntu-Mono
 font-size = 18
 
 #cursor
