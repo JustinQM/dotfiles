@@ -10,7 +10,8 @@ alias grep='grep --color=auto'
 #todo: make color not always default blue
 export PS1="\[\033[38;5;85m\]\u@\h\[$(tput sgr0)\][\w]\\$ \[$(tput sgr0)\]"
 
-alias v="vim"
+alias v="nvim"
+alias vim="nvim"
 
 alias t="tmux"
 alias tm="tmux"
@@ -28,5 +29,3 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
-export EDITOR=vim

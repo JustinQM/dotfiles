@@ -11,8 +11,9 @@ font-family = SF Mono
 font-size = 18
 
 #cursor
-cursor-style-blink = true
-cursor-style = block
+#cursor-style-blink = true
+# cursor-style = block
+#shell-integration-features = no-cursor
 
 #window
 window-decoration = false

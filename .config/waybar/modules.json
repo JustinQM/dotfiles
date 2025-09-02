@@ -7,7 +7,7 @@
             "default": ""
         },
         "on-click": "activate",
-        "all-outputs": false,
+        "all-outputs": true,
         "persistent-workspaces": {
             "*": 2
         }

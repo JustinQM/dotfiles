@@ -17,14 +17,17 @@ set relativenumber
 set number
 
 " Searching
-set ignorecase          " ignore case…
-set smartcase           " …but be smart if you use capitals
-set hlsearch            " highlight all search matches
-set incsearch           " incremental live-search
+set ignorecase " ignore case…
+set smartcase "   but be smart if you use capitals
+set hlsearch "     highlight all search matches
+set incsearch " incremental live-search
 
 " tab completion
 set wildmode=longest,list,full
 set wildmenu
+
+" remove wordwrap
+set nowrap
 
 " configure tab bar to not be ugly
 hi TabLineFill ctermfg=Black ctermbg=Black
@@ -72,5 +75,5 @@ nnoremap gd <C-]>
 nnoremap gD g]
 " Jump back in tag stack
 nnoremap gb <C-t>
-" Quick list of matches 
+" Quick list of matches
 nnoremap K :ts <C-r><C-w><CR>
