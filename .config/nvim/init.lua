@@ -43,7 +43,7 @@ vim.keymap.set("n", "<leader>tt", function()
 end)
 
 -- lsp
-vim.lsp.enable({"lua_ls", "clangd", "bashls"})
+vim.lsp.enable({"lua_ls", "clangd", "bashls", "tinymist"})
 
 -- plugins
 vim.pack.add({
@@ -52,6 +52,7 @@ vim.pack.add({
     { src = "https://github.com/tpope/vim-fugitive" },
     { src = "https://github.com/bluz71/vim-moonfly-colors" },
     { src = "https://github.com/nvim-mini/mini.pick" },
+    { src = "https://github.com/chomosuke/typst-preview.nvim.git" },
 })
 
 -- plugins: oil
@@ -70,3 +71,7 @@ vim.cmd [[colorscheme moonfly]]
 require('mini.pick').setup()
 vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
 vim.keymap.set("n", "<leader>h", ":Pick help<CR>")
+
+--plugins: typst preview
+require("typst-preview").setup()
+vim.keymap.set("n", "<leader>p", ":TypstPreview<CR>")
