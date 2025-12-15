@@ -1,8 +1,20 @@
-{
+[
+  {
     "layer": "top",
     "height": 34,
-    "spacing": 0,  // <-- Set spacing to zero
-    "modules-left": ["custom/appmenu", "hyprland/workspaces"],
+    "spacing": 0,
+    "output": ["DP-1"],
+    "modules-left": ["custom/appmenu", "hyprland/workspaces#dp1"],
     "modules-right": ["tray", "pulseaudio", "network", "clock"],
     "include": ["~/.config/waybar/modules.json"]
-}
+  },
+  {
+    "layer": "top",
+    "height": 34,
+    "spacing": 0,
+    "output": ["DP-2"],
+    "modules-left": ["custom/appmenu", "hyprland/workspaces#dp2"],
+    "modules-right": ["tray", "pulseaudio", "network", "clock"],
+    "include": ["~/.config/waybar/modules.json"]
+  }
+]

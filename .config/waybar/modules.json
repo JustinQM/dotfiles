@@ -1,51 +1,61 @@
 {
-    "hyprland/workspaces": {
-        "format": "{}",
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        },
-        "on-click": "activate",
-        "all-outputs": true,
-        "persistent-workspaces": {
-            "*": 2
-        }
+  "hyprland/workspaces#dp1": {
+    "format": "{icon}",
+    "format-icons": {
+      "11":"1","12":"2","13":"3","14":"4","15":"5",
+      "16":"6","17":"7","18":"8","19":"9","20":"10"
     },
+    "on-click": "activate",
+    "all-outputs": false,
+    "disable-scroll": true,
+    "sort-by-number": true,
+    "show-empty": false
+  },
 
-    "custom/appmenu": {
-        "format": "⮝",
-        "on-click": "fuzzel",
-        "tooltip": false
+  "hyprland/workspaces#dp2": {
+    "format": "{icon}",
+    "format-icons": {
+      "21":"1","22":"2","23":"3","24":"4","25":"5",
+      "26":"6","27":"7","28":"8","29":"9","30":"10"
     },
+    "on-click": "activate",
+    "all-outputs": false,
+    "disable-scroll": true,
+    "sort-by-number": true,
+    "show-empty": false
+  },
 
-	"clock": {
-		"format": "{:%a %b %d %I:%M %p}",
-		"tooltip-format": "{:%Y-%m-%d | %I:%M:%S %p}",
-		"interval": 1
-	},
+  "custom/appmenu": {
+    "format": "⮝",
+    "on-click": "fuzzel",
+    "tooltip": false
+  },
 
-    "network": {
-        "format-wifi": "   {signalStrength}%",
-        "format-ethernet": "  Connected",
-        "format-disconnected": "  Disconnected",
-        "tooltip-format": "{ifname}: {ipaddr}",
-        "max-length": 50
-    },
+  "clock": {
+    "format": "{:%a %b %d %I:%M %p}",
+    "tooltip-format": "{:%Y-%m-%d | %I:%M:%S %p}",
+    "interval": 1
+  },
 
-    "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "  Muted",
-        "format-icons": {
-            "default": [" ", " ", " "]
-        },
-        "scroll-step": 5,
-        "on-click": "hyprctl dispatch exec [float] pwvucontrol",
-        "on-click-right": "hyprctl dispatch exec [float] qpwgraph"
-    },
+  "network": {
+    "format-wifi": "   {signalStrength}%",
+    "format-ethernet": "  Connected",
+    "format-disconnected": "  Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "max-length": 50
+  },
 
-    "tray": {
-        "spacing": 8,
-        "icon-size": 16
-    }
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "  Muted",
+    "format-icons": { "default": [" "," "," "] },
+    "scroll-step": 5,
+    "on-click": "hyprctl dispatch exec [float] pwvucontrol",
+    "on-click-right": "hyprctl dispatch exec [float] qpwgraph"
+  },
+
+  "tray": {
+    "spacing": 8,
+    "icon-size": 16
+  }
 }
