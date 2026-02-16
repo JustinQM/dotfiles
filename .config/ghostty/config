@@ -1,4 +1,4 @@
-#color
+# #color
 background = 000000
 foreground = ffffff
 background-opacity = 0.85 
@@ -7,13 +7,8 @@ background-blur-radius = 40
 #font
 #font-family = Iosevka Custom
 font-family = SF Mono
-#font-family = Ubuntu-Mono
+# font-family = "TX-02"
 font-size = 18
-
-#cursor
-#cursor-style-blink = true
-# cursor-style = block
-#shell-integration-features = no-cursor
 
 #window
 window-decoration = false
@@ -21,5 +16,6 @@ macos-titlebar-style = "hidden"
 
 #misc
 shell-integration-features = false
-#command = tmux new -A -s $(ps aux | grep ghostty | wc -l)
 confirm-close-surface = false
+
+# theme = Red Sands
