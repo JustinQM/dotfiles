@@ -9,7 +9,7 @@
         "all-outputs": false,
         "disable-scroll": true,
         "sort-by-number": true,
-        "show-empty": false
+        "show-empty": true
     },
 
     "hyprland/workspaces#dp2": {
@@ -22,7 +22,7 @@
         "all-outputs": false,
         "disable-scroll": true,
         "sort-by-number": true,
-        "show-empty": false
+        "show-empty": true
   },
 
   "custom/appmenu": {
